@@ -17,9 +17,31 @@ class Licz():
             n-=1
         raise Exception(wynik)
 
-print Licz.silnia_rek(2)
-print Licz.silnia_rek(5)
+    @classmethod
+    def fib_rek(cls, n):
+        if n==0:
+            return 0
+        elif n==1:
+            return 1
+        else:
+            return Licz.fib_rek(n-1)+Licz.fib_rek(n-2)
 
+    @classmethod
+    def fib_wyj(cls, n):
+        if n==0:
+            raise Exception(0)
+        i=0
+        przedost = 0
+        wynik=1
+        while i<(n-1):
+            i+=1
+            temp_wynik=wynik
+            wynik +=przedost
+            przedost=temp_wynik
+        raise Exception(wynik)
+
+
+print Licz.silnia_rek(5)
 try:
     print Licz.silnia_wyj(5)
 except Exception as e:
@@ -28,6 +50,7 @@ except Exception as e:
 t_przed_rek = time.time()
 Licz.silnia_rek(700)
 t_po_rek = time.time()
+print "silnia rekurencyjnie:"
 print t_po_rek-t_przed_rek
 t_przed_wyj = time.time()
 try:
@@ -35,7 +58,11 @@ try:
 except Exception as e:
     pass
 t_po_wyj = time.time()
+print "silnia z wyjatkiem:"
 print t_po_wyj - t_przed_wyj
+
+
+
 
 
 
