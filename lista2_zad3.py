@@ -60,9 +60,19 @@ except Exception as e:
 t_po_wyj = time.time()
 print "silnia z wyjatkiem:"
 print t_po_wyj - t_przed_wyj
-
-
-
+print "Liczby Fibonacciego rekurencyjnie:"
+t_przed_rek = time.time()
+Licz.fib_rek(20)
+t_po_rek = time.time()
+print(t_po_rek-t_przed_rek)
+t_przed_wyj = time.time()
+try:
+    print Licz.fib_wyj(200)
+except Exception as e:
+    pass
+t_po_wyj = time.time()
+print "Liczby Fibonacciego z wyjatkami:"
+print(t_po_wyj-t_przed_wyj)
 
 
 
