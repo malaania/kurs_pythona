@@ -11,11 +11,17 @@ class Licz():
 
     @classmethod
     def silnia_wyj(cls, n):
-        wynik=1
-        while n>0:
-            wynik*=n
-            n-=1
-        raise Exception(wynik)
+        try:
+            Licz.silnia_acc(n,1)
+        except Exception as e:
+            return e.message
+
+    @classmethod
+    def silnia_acc(cls,n, acc):
+        if n==0:
+            raise Exception(acc)
+        else:
+            return Licz.silnia_acc(n-1,n*acc)
 
     @classmethod
     def fib_rek(cls, n):
@@ -40,39 +46,42 @@ class Licz():
             przedost=temp_wynik
         raise Exception(wynik)
 
-
+print Licz.silnia_wyj(5)
 print Licz.silnia_rek(5)
-try:
-    print Licz.silnia_wyj(5)
-except Exception as e:
-    print e.message
+#print Licz.silnia_rek(5)
 
-t_przed_rek = time.time()
-Licz.silnia_rek(700)
-t_po_rek = time.time()
-print "silnia rekurencyjnie:"
-print t_po_rek-t_przed_rek
-t_przed_wyj = time.time()
-try:
-    print Licz.silnia_wyj(700)
-except Exception as e:
-    pass
-t_po_wyj = time.time()
-print "silnia z wyjatkiem:"
-print t_po_wyj - t_przed_wyj
-print "Liczby Fibonacciego rekurencyjnie:"
-t_przed_rek = time.time()
-Licz.fib_rek(20)
-t_po_rek = time.time()
-print(t_po_rek-t_przed_rek)
-t_przed_wyj = time.time()
-try:
-    print Licz.fib_wyj(200)
-except Exception as e:
-    pass
-t_po_wyj = time.time()
-print "Liczby Fibonacciego z wyjatkami:"
-print(t_po_wyj-t_przed_wyj)
+#try:
+#    print Licz.silnia_wyj(5)
+#except Exception as e:
+#    print e.message
+#t_przed_rek = time.time()
+#Licz.silnia_rek(700)
+#t_po_rek = time.time()
+#print "silnia rekurencyjnie:"
+#print t_po_rek-t_przed_rek
+#t_przed_wyj = time.time()
+#try:
+#    print Licz.silnia_wyj(700)
+#except Exception as e:
+#    pass
+#t_po_wyj = time.time()
+#print "silnia z wyjatkiem:"
+#print t_po_wyj - t_przed_wyj
+#print "Liczby Fibonacciego rekurencyjnie:"
+#t_przed_rek = time.time()
+#Licz.fib_rek(20)
+#t_po_rek = time.time()
+#print(t_po_rek-t_przed_rek)
+#t_przed_wyj = time.time()
+#try:
+#    print Licz.fib_wyj(200)
+#except Exception as e:
+#    pass
+#t_po_wyj = time.time()
+#print "Liczby Fibonacciego z wyjatkami:"
+#print(t_po_wyj-t_przed_wyj)
+
+#Licz.silnia(5)
 
 
 
