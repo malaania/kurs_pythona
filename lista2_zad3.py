@@ -64,12 +64,12 @@ t_po = time.time()
 print "Silnia z wyjatkiem: " + (t_po-t_przed).__str__()
 t_przed = time.time()
 for i in range(0,1000):
-    Licz.fib_rek(10)
+    Licz.fib_rek(15)
 t_po = time.time()
 print "Fibonacci rekurencyjnie: " + (t_po-t_przed).__str__()
 t_przed = time.time()
 for i in range(0,1000):
-    Licz.fib_wyj(10)
+    Licz.fib_wyj(15)
 t_po = time.time()
 print "Fibonacci z wyjatkiem: " + (t_po-t_przed).__str__()
 
