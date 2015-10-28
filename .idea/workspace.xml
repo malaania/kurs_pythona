@@ -20,6 +20,7 @@
     <SUITE FILE_PATH="coverage/kurs_rozsz_python$lista3_zad2.coverage" NAME="lista3_zad2 Coverage Results" MODIFIED="1445581939726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kurs_rozsz_python$lista3_zad2_2.coverage" NAME="lista3_zad2_2 Coverage Results" MODIFIED="1446042782219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kurs_rozsz_python$lista2_zad3.coverage" NAME="lista2_zad3 Coverage Results" MODIFIED="1445580686859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kurs_rozsz_python$lista4_zad1.coverage" NAME="lista4_zad1 Coverage Results" MODIFIED="1446049786908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,17 +35,37 @@
         <entry file="file://$PROJECT_DIR$/lista3_zad1_2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista3_zad2_2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lista3_zad2_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lista3_zad2_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8955224">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista3_zad2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lista3_zad2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista4_zad1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lista4_zad1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16791044">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -67,6 +88,7 @@
         <option value="$PROJECT_DIR$/lista3_zad2.py" />
         <option value="$PROJECT_DIR$/lista3_zad1.py" />
         <option value="$PROJECT_DIR$/lista3_zad2_2.py" />
+        <option value="$PROJECT_DIR$/lista4_zad1.py" />
       </list>
     </option>
   </component>
@@ -136,25 +158,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Python.lista3_zad2_2 (1)">
-    <configuration default="false" name="lista2_zad3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="kurs_rozsz_python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lista2_zad3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.lista4_zad1">
     <configuration default="false" name="lista3_zad1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -223,6 +227,24 @@
       <module name="kurs_rozsz_python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lista3_zad2_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="lista4_zad1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="kurs_rozsz_python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lista4_zad1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -416,19 +438,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.lista2_zad3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.lista3_zad1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.lista3_zad2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.lista3_zad2_2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.lista3_zad2_2 (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.lista3_zad1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.lista3_zad2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.lista3_zad2_2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.lista3_zad2_2 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.lista4_zad1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.lista3_zad2_2 (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.lista3_zad2_2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.lista3_zad2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.lista3_zad1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.lista2_zad3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.lista4_zad1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.lista3_zad2_2 (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.lista3_zad2_2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.lista3_zad2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.lista3_zad1" />
       </list>
     </recent_temporary>
   </component>
@@ -707,18 +729,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lista3_zad1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#45#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.27985075">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lista3_zad2.py">
+    <entry file="file://$PROJECT_DIR$/lista3_zad2_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="67" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="67" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -726,15 +746,23 @@
     <entry file="file://$PROJECT_DIR$/lista3_zad1_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lista3_zad2_2.py">
+    <entry file="file://$PROJECT_DIR$/lista3_zad2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8955224">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lista4_zad1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16791044">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
