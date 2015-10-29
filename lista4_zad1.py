@@ -1,5 +1,6 @@
 __author__ = 'malaania'
 from lista3_zad1_2 import *
+from itertools import islice,count
 import time
 
 class PierwszeIter:
@@ -19,6 +20,29 @@ def pierwsze_iter(n):
         iter.__next__()
     return lista_pierwszych
 
+def pierwsze_it():
+    zlozone = {}
+    yield 2
+    for q in islice(count(3),0,None,2):
+        p = zlozone.pop(q,None)
+        if p is None:
+            zlozone[q*q]=q
+            yield q
+        else:
+            x= q + 2*p
+            while x in zlozone:
+                x+=2*p
+            zlozone[x]=p
+
+def pierwsze_iteracyjna(n):
+    it = pierwsze_it()
+    tab =[]
+    temp = next(it)
+    while temp<=n:
+        tab.append(temp)
+        temp = next(it)
+    return tab
+
 def space_gen(n):
     space=""
     for i in range(n):
@@ -37,7 +61,7 @@ def sprawdz_s(n):
     return str("%.4f" % (stop-start))
 def sprawdz_i(n):
     start = time.time()
-    pierwsze_iter(n)
+    pierwsze_iteracyjna(n)
     stop = time.time()
     return str("%.4f" % (stop-start))
 
@@ -52,3 +76,4 @@ def porownaj(lista_arg):
 
 
 porownaj([50,3100,123,12])
+#print str(pierwsze_iteracyjna(25))
