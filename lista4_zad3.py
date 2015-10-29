@@ -1,5 +1,6 @@
 __author__ = 'malaania'
 from itertools import imap
+import collections
 
 class PrzetwarzajStrumien():
     def __init__(self,zrodlo):
@@ -26,6 +27,7 @@ def koryguj_strumien(iter):
     return imap(korekta,iter)
 
 ps = PrzetwarzajStrumien("/home/malaania/Documents/text")
+print isinstance(ps, collections.Iterable)
 print "|"+korekta("ania lalalalala    \n")+"|"
 for i in koryguj_strumien(ps):
     print i

@@ -4,8 +4,9 @@ from itertools import islice,count
 import time
 
 class PierwszeIter:
-    def __iter__(self):
+    def __init__(self):
         self.licznik = 2
+    def __iter__(self):
         return self
     def __next__(self):
         while 1:
@@ -77,4 +78,5 @@ def porownaj(lista_arg):
 
 
 porownaj([50,3100,123,12])
-#print str(pierwsze_iteracyjna(25))
+print str(pierwsze_iteracyjna(25))
+print str(pierwsze_iter(25))
