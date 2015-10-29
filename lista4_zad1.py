@@ -4,8 +4,9 @@ from itertools import islice,count
 import time
 
 class PierwszeIter:
-    def __init__(self):
+    def __iter__(self):
         self.licznik = 2
+        return self
     def __next__(self):
         while 1:
             self.licznik+=1
