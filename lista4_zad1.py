@@ -42,11 +42,13 @@ def sprawdz_i(n):
     return str("%.4f" % (stop-start))
 
 def porownaj(lista_arg):
-    dl_arg =[len(str(i)) for i in lista_arg]
-    max_dl_arg = max(dl_arg)
-    print space_gen(max_dl_arg)+" | funkcyjna | skladana | iterator"
+    max_dl = max([len(str(i)) for i in lista_arg])
+    print space_gen(max_dl)+" | funkcyjna | skladana | iterator"
     for arg in lista_arg:
-        print str(arg) +" | " + sprawdz_f(arg) +" | " +sprawdz_s(arg)+" | " + sprawdz_i(arg)
+        print space_gen(max_dl-len(str(arg)))+str(arg) +\
+              " |    " + sprawdz_f(arg) +\
+              " |   " +sprawdz_s(arg)+\
+              " |   " + sprawdz_i(arg)
 
 
-porownaj([50,3100,123])
+porownaj([50,3100,123,12])
