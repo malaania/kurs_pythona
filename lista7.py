@@ -57,7 +57,7 @@ class TurtleDrawingArea(gtk.DrawingArea):
 
 
         if(self.velocity!=0):
-            #where the bullet hit
+            #where the bullet hits
             cr.set_source_rgb(0.0,0.5,0.0)
             shot = 15 + self.velocity*self.velocity*sin(radians(2*self.angle))/10
             cr.move_to(shot,200)
@@ -69,18 +69,13 @@ class TurtleDrawingArea(gtk.DrawingArea):
             x = shot - 15
             x10 = x/10
             x_sum=x10
-            #print x10
-            #print shot
             trjct_x = []
             while x_sum<x:
                 trjct_x.append(x_sum)
                 x_sum += x10
             trjct_y = [calc_y(x,self.angle,self.velocity) for x in trjct_x]
-            #print len(trjct_x)
             for i in range(len(trjct_x)):
-                #print str(trjct_x[i]) +" "+str(trjct_y[i])
                 if trjct_y[i]<0 :
-                    print "hello"
                     break
                 cr.set_source_rgb(0.0,0.5,0.0)
                 cr.move_to(trjct_x[i]+15,190-trjct_y[i])
@@ -120,8 +115,6 @@ class MyWindow(gtk.Window):
         self.entry_velocity=gtk.Entry()
         self.entry_angle.set_text("30")
         self.entry_velocity.set_text("0")
-        #self.entry_angle.connect("activate",self.angle_callback, self.entry_angle)
-        #self.entry_velocity.connect("activate", self.velocity_callback, self.entry_velocity)
 
         self.optBox1.pack_start(self.btn_angle,False,False,0)
         self.optBox1.pack_start(self.entry_angle,False,False,0)
