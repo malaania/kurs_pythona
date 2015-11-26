@@ -7,6 +7,12 @@ import random
 
 class TurtleDrawingArea(gtk.DrawingArea):
 
+    def __init__(self):
+        gtk.DrawingArea.__init__(self)
+        self.target_dist = random.randint(100,300)
+        self.angle = 0
+        self.velocity = 0
+
     __gsignals__ = {"expose-event":"override"}
 
     def do_expose_event(self, event):
@@ -19,11 +25,8 @@ class TurtleDrawingArea(gtk.DrawingArea):
         else:
             self.draw(self.cr, 30,0, *self.window.get_size())
 
-    def shoot(self,button,angle,velocity):
-        self.angle=angle
-        self.velocity=velocity
+    def shoot(self,button):
         self.queue_clear()
-        #print "hello"
 
     def draw(self,cr,angle,velocity, width, height ):
         cr.set_source_rgb(0.5, 0.5, 0.5)
@@ -44,11 +47,10 @@ class TurtleDrawingArea(gtk.DrawingArea):
         cr.stroke()
 
         #draw target
-        target_dist = random.randint(100,300)
         cr.set_source_rgb(1.0,0.0,0.0)
-        cr.move_to(target_dist,200)
+        cr.move_to(self.target_dist,200)
         cr.rel_line_to(0, -20)
-        cr.move_to(target_dist-10,190)
+        cr.move_to(self.target_dist-10,190)
         cr.rel_line_to(20,0)
         cr.stroke()
 
@@ -57,22 +59,38 @@ class TurtleDrawingArea(gtk.DrawingArea):
 
 
 class MyWindow(gtk.Window):
+
+    def angle_callback(self,widget,entry):
+        angle = entry.get_text()
+        self.turtle_area.angle = float(angle)
+        print "You set an angle to " + angle
+
+    def velocity_callback(self,widget,entry):
+        velocity = entry.get_text()
+        self.turtle_area.velocity = float(velocity)
+        print "You set an velocity to " + velocity
+
     def __init__(self):
         gtk.Window.__init__(self)
 
         self.box = gtk.VBox()
         self.add(self.box)
-
+        self.angle = "0"
 
         self.turtle_area = TurtleDrawingArea()
         self.box.pack_start(self.turtle_area, True,True, 0)
 
         self.optBox1= gtk.HBox()
         self.entry_angle= gtk.Entry()
-        self.label_angle = gtk.Label("Angle")
-        self.label_velocity = gtk.Label("Velocity")
+        self.btn_angle = gtk.Button("Set angle")
+        self.label_velocity = gtk.Label("Set velocity")
         self.entry_velocity=gtk.Entry()
-        self.optBox1.pack_start(self.label_angle,False,False,0)
+        self.entry_angle.set_text("0")
+        self.entry_velocity.set_text("0")
+        self.entry_angle.connect("activate",self.angle_callback, self.entry_angle)
+        self.entry_velocity.connect("activate", self.velocity_callback, self.entry_velocity)
+
+        self.optBox1.pack_start(self.btn_angle,False,False,0)
         self.optBox1.pack_start(self.entry_angle,False,False,0)
         self.optBox1.pack_start(self.label_velocity,False,False,0)
         self.entry_angle.show()
@@ -80,9 +98,12 @@ class MyWindow(gtk.Window):
         self.entry_velocity.show()
 
         self.button_target=gtk.Button("Go!")
-        self.button_target.connect("clicked", self.turtle_area.shoot,60,60)
+        self.button_target.connect("clicked", self.turtle_area.shoot)
+        self.btn_angle.connect("clicked",self.angle_callback,self.entry_angle)
         self.optBox1.pack_start(self.button_target,False,False,0)
         self.box.pack_start(self.optBox1,False,False,0)
+
+
 
 
 if __name__=="__main__":
