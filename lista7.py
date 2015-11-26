@@ -57,9 +57,8 @@ class TurtleDrawingArea(gtk.DrawingArea):
 
 
         if(self.velocity!=0):
-            print "hello"
             #where the bullet hit
-            cr.set_source_rgb(0.0,1.0,0.0)
+            cr.set_source_rgb(0.0,0.5,0.0)
             shot = 15 + self.velocity*self.velocity*sin(radians(2*self.angle))/10
             cr.move_to(shot,200)
             cr.rel_line_to(0, -20)
@@ -80,9 +79,12 @@ class TurtleDrawingArea(gtk.DrawingArea):
             #print len(trjct_x)
             for i in range(len(trjct_x)):
                 #print str(trjct_x[i]) +" "+str(trjct_y[i])
-                cr.set_source_rgb(0.0,1.0,0.0)
-                cr.move_to(trjct_x[i],200-trjct_y[i])
-                cr.rel_line_to(1,1)
+                if trjct_y[i]<0 :
+                    print "hello"
+                    break
+                cr.set_source_rgb(0.0,0.5,0.0)
+                cr.move_to(trjct_x[i]+15,190-trjct_y[i])
+                cr.rel_line_to(2,2)
                 cr.stroke()
 
 
@@ -104,7 +106,7 @@ class MyWindow(gtk.Window):
 
     def __init__(self):
         gtk.Window.__init__(self)
-
+        self.set_default_size(600,250)
         self.box = gtk.VBox()
         self.add(self.box)
 
