@@ -24,7 +24,7 @@ class TurtleDrawingArea(gtk.DrawingArea):
         if(hasattr(self,'angle') and hasattr(self,'velocity')):
             self.draw(self.cr, self.angle,self.velocity, *self.window.get_size())
         else:
-            self.draw(self.cr, 30,0, *self.window.get_size())
+            self.draw(self.cr, self.angle,self.velocity, *self.window.get_size())
 
     def shoot(self,button):
         self.queue_clear()

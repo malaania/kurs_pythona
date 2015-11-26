@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9f5330a-6014-4742-9c22-4eb8b85ed6a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lista7.py" afterPath="$PROJECT_DIR$/lista7.py" />
     </list>
     <ignored path="kurs_rozsz_python.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="lista7.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lista7.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6185567">
-              <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.82474226">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -295,8 +294,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lista7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6185567">
-          <caret line="102" column="35" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.82474226">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
