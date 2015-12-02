@@ -66,10 +66,5 @@ class BazaKontaktow():
     def update_contact(self,id,new_contact):
         pass
 
-
-
-baza =  BazaKontaktow()
-#baza.delete_contact(2)
-#baza.display_all_contacts()
-#baza.add_contact("Ania B", "11111","ania@gmail.com")
-baza.display_all_contacts()
+    def end_connection(self):
+        self.con.close()
