@@ -3,7 +3,7 @@
 
 import MySQLdb as mdb
 import time
-from zad8_kontakt import Kontakt
+from lista8_kontakt import Kontakt
 
 def checkTableExists(dbcon, tablename):
     dbcur = dbcon.cursor()
@@ -32,11 +32,14 @@ class BazaKontaktow():
                     Nr_tel VARCHAR(15),
                     Mail VARCHAR(50),
                     Ostatnie_wyswietlenie DATE)''')
-            self.kontakty = []
-            self.cur.execute("SELECT * FROM Kontakty");
-            for i in range(self.cur.rowcount):
-                row = self.cur.fetchone()
-                self.kontakty.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
+            self.update_contacts()
+
+    def update_contacts(self):
+        self.kontakty = []
+        self.cur.execute("SELECT * FROM Kontakty");
+        for i in range(self.cur.rowcount):
+            row = self.cur.fetchone()
+            self.kontakty.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
 
     def display_all_contacts(self):
         for kontakt in self.kontakty:
@@ -53,9 +56,20 @@ class BazaKontaktow():
             "VALUES(%s,%s,%s,%s)",
             (nazwa,nr,mail,time.strftime('%Y-%m-%d')))
         self.con.commit()
+        self.update_contacts()
+
+    def delete_contact(self,id):
+        self.cur.execute("DELETE FROM Kontakty WHERE Id=%s",id)
+        self.con.commit()
+        self.update_contacts()
+
+    def update_contact(self,id,new_contact):
+        pass
 
 
 
 baza =  BazaKontaktow()
+#baza.delete_contact(2)
+#baza.display_all_contacts()
 #baza.add_contact("Ania B", "11111","ania@gmail.com")
 baza.display_all_contacts()
