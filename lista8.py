@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import MySQLdb as mdb
-import sys
+import time
 from zad8_kontakt import Kontakt
 
 def checkTableExists(dbcon, tablename):
@@ -40,15 +40,22 @@ class BazaKontaktow():
 
     def display_all_contacts(self):
         for kontakt in self.kontakty:
-            print "Kontakt "+ kontakt.id
+            print "Kontakt "+ str(kontakt.id)
             print kontakt.nazwa
             print kontakt.nr_tel
             print kontakt.mail
             print kontakt.ostatnie_wyswietlenie
+            print ""
 
     def add_contact(self, nazwa, nr, mail):
-        
+        self.cur.execute(
+            "INSERT INTO Kontakty(Nazwa,Nr_tel,Mail,Ostatnie_wyswietlenie) "
+            "VALUES(%s,%s,%s,%s)",
+            (nazwa,nr,mail,time.strftime('%Y-%m-%d')))
+        self.con.commit()
 
 
 
 baza =  BazaKontaktow()
+#baza.add_contact("Ania B", "11111","ania@gmail.com")
+baza.display_all_contacts()
