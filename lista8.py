@@ -68,7 +68,10 @@ class BazaKontaktow():
 
     def update_last_view(self,id):
         self.cur.execute(
-            "SELECT FROM")
+            "UPDATE Kontakty SET Ostatnie_wyswietlenie=%s WHERE Id=%s",
+            (time.strftime('%Y-%m-%d'),id))
+        self.con.commit()
+        self.update_contacts()
 
     def end_connection(self):
         self.con.close()
