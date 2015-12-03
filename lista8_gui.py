@@ -7,12 +7,12 @@ from lista8 import BazaKontaktow
 class MyNotUsedContactsWindow(gtk.Window):
     def __init__(self,notUsedList):
         gtk.Window.__init__(self)
-        self.set_default_size(100,600)
+        self.set_default_size(250,500)
         k_box = gtk.VBox()
         self.add(k_box)
         list = gtk.List()
         k_box.pack_start(list,False,False,0)
-        list.append_items([gtk.ListItem(kontakt.nazwa)for kontakt in notUsedList])
+        list.append_items([gtk.ListItem(kontakt.nazwa + "   |   "+str(kontakt.ostatnie_wyswietlenie))for kontakt in notUsedList])
         list.show()
 
 class MyContactWindow(gtk.Window):
