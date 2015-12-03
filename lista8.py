@@ -40,6 +40,11 @@ class BazaKontaktow():
         for i in range(self.cur.rowcount):
             row = self.cur.fetchone()
             self.kontakty.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
+        self.nie_uzywane=[]
+        self.cur.execute(" select * from Kontakty where Ostatnie_wyswietlenie<%s",(time.strftime('%Y-%m-%d')))
+        for i in range(self.cur.rowcount):
+            row = self.cur.fetchone()
+            self.nie_uzywane.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
 
     def display_all_contacts(self):
         for kontakt in self.kontakty:
@@ -72,6 +77,8 @@ class BazaKontaktow():
             (time.strftime('%Y-%m-%d'),id))
         self.con.commit()
         self.update_contacts()
+
+
 
     def end_connection(self):
         self.con.close()
