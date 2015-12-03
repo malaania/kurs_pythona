@@ -1,6 +1,20 @@
 import gtk
 from lista8 import BazaKontaktow
 
+class MyContactWindow(gtk.Window):
+    def __init__(self,name,number,mail):
+        gtk.Window.__init__(self)
+        self.set_default_size(600,100)
+        k_box = gtk.HBox()
+        self.add(k_box)
+        text = "        "+name+ "           Nr telefonu:  "+number+"             E-mail:  "+mail
+        k_label=gtk.Label(text)
+        k_box.pack_start(k_label,False,False,0)
+        k_box.show()
+
+
+
+
 class MyWindow(gtk.Window):
 
     def addContact(self,widget,nameEntry,numberEntry,mailEntry):
@@ -19,8 +33,12 @@ class MyWindow(gtk.Window):
         selection = list.get_selection()
         print selection
 
-    def openContact(self):
-        pass
+    def openContact(self,widget,name,number,mail):
+        self.baza_kontaktow
+        win = MyContactWindow(name,number,mail)
+        win.connect("delete-event", gtk.main_quit)
+        win.show_all()
+        gtk.main()
 
 
     def __init__(self):
@@ -38,7 +56,8 @@ class MyWindow(gtk.Window):
             k_label.set_width_chars(35)
             k_label.set_alignment(xalign=0,yalign=0.2)
             open_button = gtk.Button("Otworz kontakt")
-            open_button.connect("clicked",self.openContact)
+            open_button.connect("clicked",self.openContact,
+                                kontakt.nazwa,kontakt.nr_tel,kontakt.mail)
             remove_button= gtk.Button("Usun kontakt")
             k_box.pack_start(k_label,False,False,0)
             k_box.pack_start(open_button,False,False,0)

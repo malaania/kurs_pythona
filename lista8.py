@@ -66,5 +66,9 @@ class BazaKontaktow():
     def update_contact(self,id,new_contact):
         pass
 
+    def update_last_view(self,id):
+        self.cur.execute(
+            "SELECT FROM")
+
     def end_connection(self):
         self.con.close()
