@@ -14,7 +14,7 @@ class PrzetwarzajStrumien():
             f = open(zrodlo,'r')
         except IOError:
             f=None
-            print "File you are trying to open does not exist"
+            print "File you are trying to open does not exist."
         return f
 
 
@@ -42,4 +42,4 @@ def koryguj_strumien(iter):
 #print isinstance(ps, collections.Iterable)
 #print "|"+korekta("ania lalalalala    \n")+"|"
 #for i in koryguj_strumien(ps):
-#    print i
+#   print i
