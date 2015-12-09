@@ -41,7 +41,9 @@ class BazaKontaktow():
             row = self.cur.fetchone()
             self.kontakty.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
         self.nie_uzywane=[]
-        self.cur.execute(" select * from Kontakty where Ostatnie_wyswietlenie<%s",(time.strftime('%Y-%m-%d')))
+        year=str(int(time.strftime(('%Y')))-1)
+        date = year + time.strftime('%Y-%m-%d')[4:]
+        self.cur.execute(" select * from Kontakty where Ostatnie_wyswietlenie<%s",(date))
         for i in range(self.cur.rowcount):
             row = self.cur.fetchone()
             self.nie_uzywane.append(Kontakt(row[0],row[1],row[2],row[3],row[4]))
