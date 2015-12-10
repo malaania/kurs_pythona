@@ -2,13 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import pydoc
 from lista4_zad3 import *
 
+
 class TestLista4Zad1(unittest.TestCase):
-
     def setUp(self):
-
         self.stream = PrzetwarzajStrumien(
             "/home/malaania/Documents/text")
 
@@ -31,9 +29,9 @@ class TestLista4Zad1(unittest.TestCase):
                          "Happily for readers, vinciguerra widened his lens.")
 
     def test_korekta(self):
-        paryZdan = zip(self.bledne,self.poprawne)
+        paryZdan = zip(self.bledne, self.poprawne)
         for bad, correct in paryZdan:
-            result =  korekta(bad)
+            result = korekta(bad)
             self.assertEqual(result, correct)
 
     def test_non_existing_file_exception(self):
@@ -43,7 +41,8 @@ class TestLista4Zad1(unittest.TestCase):
         )
 
     def test_koryguj_strumien(self):
-        self.assertItemsEqual(koryguj_strumien(self.bledne),self.poprawne)
+        self.assertItemsEqual(koryguj_strumien(self.bledne), self.poprawne)
+
 
 if __name__ == "__main__":
     unittest.main()
